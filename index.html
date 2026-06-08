@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+
+    <div class="logo">
+        Oliver Lawrence
+    </div>
+
+    <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+    </nav>
+
+</header>
+
+<section>
+    <h2>About Me</h2>
+
+    <p>
+        I am a Computer Games Technology student with a focus on gameplay programming, AI systems, and
+        game mechanics development using Unity and C#.
+    </p>
+    
+</section>
+
+<section>
+    <h2>Featured Projects</h2>
+
+    <a href="projects/TOY.html" class="project-card">
+        
+        <div class="media-wrapper">
+
+            <img src="TOY.png" class="video-poster" alt="TOY Thumbnail">
+
+            <video muted loop playsinline preload="none" class="video-preview">
+                <source src="TOYVID.mp4" type="video/mp4">
+            </video>
+
+        </div>
+        
+        <h3>Toy Offensive Yunit (Real-time Interactive Group Project)</h3>
+
+        <p>
+            Developed a vertical slice sandbox shooter for Rebellion as part of a 16-person multidisciplinary team.
+            As an AI Programmer, I designed and implemented enemy behaviours including perception systems,
+            cover mechanics, squad coordination, and finite state machine-driven decision making using Unity and C#.
+        </p>
+
+        <p class="tags">
+            Unity · C# · AI Programming · FSM · Gameplay Systems
+        </p>
+        
+    </a>
+
+    <a href="projects/FYP.html" class="project-card">
+
+        <div class="media-wrapper">
+
+            <img src="FYP.png" class="video-poster" alt="FYP Thumbnail">
+
+            <video muted loop playsinline preload="none" class="video-preview">
+                <source src="FYPVID.mp4" type="video/mp4">
+            </video>
+
+        </div>
+
+        <h3>Adaptive AI in Procedurally Generated Environments (Final Year Project)</h3>
+
+        <p>
+            Developed an AI system using Unity’s ML-Agents toolkit to explore how reinforcement learning agents adapt within procedurally generated environments.
+            The project implemented a deep reinforcement learning approach to train agents within dynamically generated 3D maze environments.
+        </p>
+
+        <p>
+            The agent was trained to complete multiple task types including navigation to target locations, waiting within designated zones, and pickup-and-delivery objectives.
+            A procedural generation system was used to create varying maze layouts, enabling evaluation of generalisation and adaptability.
+        </p>
+
+        <p>
+            Performance was evaluated by comparing a trained agent operating in fixed environments against one trained within procedural environments.
+            Results demonstrated that while the fixed agent performed well in familiar layouts, the procedural-trained agent achieved significantly higher success rates in unpredictable environments, indicating improved generalisation.
+        </p>
+
+        <p class="tags">
+            Unity · C# · ML-Agents · Reinforcement Learning · Procedural Generation · AI Research
+        </p>
+
+    </a>
+
+    <a href="projects/SolarSystem.html" class="project-card">
+
+        <div class="media-wrapper">
+
+            <img src="SSS.png" class="video-poster" alt="SSS Thumbnail">
+
+            <video muted loop playsinline preload="none" class="video-preview">
+                <source src="SSSVID.mp4" type="video/mp4">
+            </video>
+
+        </div>
+
+        <h3>Solar System Simulation (Maths for Games Project)</h3>
+
+        <p>
+            Developed a real-time 3D solar system simulation in Unity focused on implementing core mathematical systems
+            for object movement, camera control, and spatial transformations within a dynamic environment.
+        </p>
+
+        <p>
+            Implemented vector-based orbital motion to simulate planetary movement in 3D space, alongside matrix-based
+            transformation logic for scaling, rotation, and translation of objects in the scene.
+        </p>
+
+        <p>
+            Used Euler angles for initial camera control, later transitioning to quaternions to resolve gimbal lock and
+            improve rotational stability. Developed interpolation techniques to smooth camera movement between targets
+            and improve overall motion flow.
+        </p>
+
+        <p>
+            This project demonstrates practical application of core game mathematics, including vectors, matrices,
+            quaternions, and interpolation, within a real-time simulation system.
+        </p>
+
+        <p class="tags">
+            Unity · C# · Game Mathematics · Vectors · Quaternions · Matrices · Interpolation · Simulation Systems
+        </p>
+
+    </a>
+
+    <div style="text-align:center; margin-top:20px;">
+        <a href="projects.html" class="button">
+            View All Projects
+        </a>
+    </div>
+
+</section>
+
+<section>
+    <h2>Skills</h2>
+
+    <ul>
+        <li>C#</li>
+        <li>C++</li>
+        <li>Unity</li>
+        <li>Unreal Engine</li>
+        <li>Game AI</li>
+        <li>Machine Learning</li>
+        <li>Mathematics</li>
+        <li>Git</li>
+    </ul>
+</section>
+
+<footer class="footer">
+
+    <p>© 2026 Oliver Lawrence</p>
+
+    <p>
+        <a href="mailto:olliescottlawrence@icloud.com">
+            Email
+        </a>
+        |
+        <a href="https://github.com/Olawrence1" target="_blank">
+            GitHub
+        </a>
+        |
+        <a href="https://www.linkedin.com/in/oliver-lawrence-663a72387" target="_blank">
+            LinkedIn
+        </a>
+        |
+        <a href="https://OLawrence.itch.io" target="_blank">
+            itch.io
+        </a>
+    </p>
+
+</footer>
+
+</body>
+
+</html>
+
+<script>
+    document.querySelectorAll('.project-card').forEach(card => {
+        const video = card.querySelector('video');
+
+        card.addEventListener('mouseenter', () => {
+            if (video) {
+                video.play();
+            }
+        });
+
+        card.addEventListener('mouseleave', () => {
+            if (video) {
+                video.pause();
+                video.currentTime = 0;
+            }
+        });
+    });
+</script>

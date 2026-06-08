@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AI Battle Simulation</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+
+    <div class="logo">
+        PSGAM
+    </div>
+
+    <nav class="nav">
+        <a href="../index.html">Home</a>
+        <a href="../projects.html">Projects</a>
+    </nav>
+
+</header>
+
+<section>
+
+    <h2>Overview</h2>
+
+    <div class="media-hero">
+        <video muted loop playsinline autoplay>
+            <source src="../PSGAMVID2.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <p>
+        For my Programming Systems for Games module, I developed an AI battle
+        simulation in Unity where two teams of autonomous agents compete inside
+        a procedurally generated maze until only one team remains.
+    </p>
+
+    <p>
+        The project combined several gameplay systems including procedural maze
+        generation, graph-based pathfinding, finite state machine AI, and an
+        online leaderboard to create a replayable simulation with no direct
+        player control.
+    </p>
+
+    <h2>My Contribution</h2>
+
+    <p>
+        This was an individual project where I designed and implemented every
+        gameplay system from scratch, integrating multiple independent systems
+        into a single AI-driven experience.
+    </p>
+
+    <ul>
+        <li>Implemented procedural maze generation using a randomised Depth First Search algorithm.</li>
+        <li>Created a custom grid-based navigation graph and A* pathfinding system.</li>
+        <li>Developed finite state machine AI controlling navigation, combat and decision making.</li>
+        <li>Integrated an online leaderboard using the Dreamlo web service API.</li>
+        <li>Combined all systems into a fully autonomous battle simulation.</li>
+    </ul>
+
+    <h2>Technical Breakdown</h2>
+
+    <p>
+        The procedural generation system creates a unique maze at runtime using
+        a randomised Depth First Search algorithm. This guarantees a fully
+        connected environment while ensuring every simulation takes place in a
+        different layout, increasing replayability and preventing predictable
+        encounters.
+    </p>
+
+    <p>
+        AI navigation is handled through a custom grid-based navigation graph
+        generated after the maze is built. Agents use the A* pathfinding
+        algorithm to calculate efficient routes through the environment while
+        avoiding walls and obstacles.
+    </p>
+
+    <p>
+        Agent behaviour is controlled through a Finite State Machine (FSM)
+        consisting of states such as patrolling, chasing enemies, attacking,
+        and collecting weapons. State transitions are driven by information
+        gathered from the environment and current gameplay conditions, allowing
+        agents to react dynamically during combat.
+    </p>
+
+    <p>
+        To encourage replayability beyond the simulation itself, I integrated
+        an online leaderboard using the Dreamlo API. Player scores can be
+        uploaded, downloaded, sorted and displayed in-game, allowing different
+        simulation results to be compared between sessions.
+    </p>
+    
+    <h2>Challenges</h2>
+
+    <p>
+        One of the largest technical challenges involved synchronising the
+        procedural generation pipeline. Initially, the navigation graph was
+        generated before the maze had finished creating, resulting in nodes
+        appearing inside walls and causing invalid paths.
+    </p>
+
+    <p>
+        This was resolved by restructuring the generation sequence using
+        coroutines, ensuring the maze completed first, followed by navigation
+        graph creation and finally AI spawning. This dependency ordering
+        eliminated invalid navigation data and allowed all systems to integrate
+        correctly.
+    </p>
+
+    <p>
+        Another issue arose when pathfinding targets were recalculated every
+        frame, causing agents to repeatedly restart path searches and become
+        stuck. Optimising updates so destinations were only recalculated when
+        necessary significantly improved movement performance and stability.
+    </p>
+
+    <h2>Outcome</h2>
+
+    <p>
+        The final project successfully combined procedural generation,
+        pathfinding, AI behaviour systems and live services into a cohesive
+        simulation where autonomous agents dynamically explore, fight and adapt
+        within unique environments every playthrough.
+    </p>
+
+    <p>
+        The project strengthened my understanding of AI architecture,
+        navigation systems, procedural generation techniques and the
+        complexities of integrating multiple gameplay systems into a scalable
+        framework.
+    </p>
+
+    <p class="tags">
+        Unity · C# · Artificial Intelligence · Finite State Machines ·
+        Procedural Generation · A* Pathfinding · Graph Algorithms · Live
+        Services · Dreamlo API
+    </p>
+
+</section>
+
+<footer class="footer">
+
+    <p>© 2026 Oliver Lawrence</p>
+
+    <p>
+        <a href="mailto:olliescottlawrence@icloud.com">
+            Email
+        </a>
+        |
+        <a href="https://github.com/Olawrence1" target="_blank">
+            GitHub
+        </a>
+        |
+        <a href="https://www.linkedin.com/in/oliver-lawrence-663a72387" target="_blank">
+            LinkedIn
+        </a>
+        |
+        <a href="https://OLawrence.itch.io" target="_blank">
+            itch.io
+        </a>
+    </p>
+
+</footer>
+
+</body>
+</html>
+

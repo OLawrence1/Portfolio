@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Solar System Simulation Project</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+
+    <div class="logo">
+        Solar System Simulation
+    </div>
+
+    <nav class="nav">
+        <a href="../index.html">Home</a>
+        <a href="../projects.html">Projects</a>
+    </nav>
+
+</header>
+
+<section>
+
+    <h2>Overview</h2>
+
+    <div class="media-hero">
+        <video muted loop playsinline autoplay>
+            <source src="../SSSVID.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <p>
+        A custom 3D solar system simulation developed for my Maths for Games module.
+        The project was designed to demonstrate the practical application of core game
+        mathematics, including vectors, matrices, Euler angles, quaternions, and interpolation.
+    </p>
+
+    <p>
+        The simulation allows the user to navigate around a miniature solar system while planets
+        orbit, rotate, and scale correctly using mathematically driven transformations rather than
+        pre-built Unity functionality.
+    </p>
+
+    <h2>My Contribution</h2>
+
+    <p>
+        This was an individual project where I was responsible for the entire implementation,
+        including the mathematical systems, camera controls, orbital movement, transformation
+        calculations, and evaluation of different rotation and interpolation techniques.
+    </p>
+
+    <p>
+        A major focus of the project was applying mathematical concepts taught throughout the
+        module to solve practical gameplay and simulation problems.
+    </p>
+
+    <h2>Technical Breakdown</h2>
+
+    <p>
+        The simulation uses vector mathematics extensively for positioning and directional
+        calculations. Planetary orbit movement, camera navigation, and object transformations
+        all rely on vector operations to calculate movement within 3D space.
+    </p>
+
+    <p>
+        For object transformations, matrix mathematics was used to combine translation,
+        rotation, and scaling operations. This required constructing transformations in the
+        correct order to avoid unexpected results and ensure objects maintained their
+        intended positions and orientations.
+    </p>
+
+    <p>
+        Both Euler angles and quaternions were explored for handling rotation.
+        Euler angles provided a simple method for controlling camera pitch and yaw, while
+        quaternions were used for planetary rotation to avoid gimbal lock and ensure stable
+        orientation regardless of rotational state.
+    </p>
+
+    <p>
+        Interpolation techniques were implemented to smoothly transition the camera between
+        planets. Linear interpolation was used to avoid abrupt camera snapping and create a
+        more natural navigation experience when moving throughout the solar system.
+    </p>
+
+    <h2>Challenges</h2>
+
+    <p>
+        One of the main technical challenges encountered was gimbal lock when using Euler
+        angles for object rotation. This caused rotational axes to become aligned, producing
+        unpredictable behaviour. The issue was resolved by replacing object rotations with
+        quaternions, providing stable orientation regardless of rotational state.
+    </p>
+
+    <p>
+        Another challenge involved matrix transformation order. Early implementations
+        produced incorrect results because transformations were being applied in the wrong
+        sequence. Through testing and debugging, the correct Scale → Rotate → Translate
+        pipeline was implemented.
+    </p>
+
+    <p>
+        Camera interpolation also introduced issues at high movement speeds, where the
+        camera struggled to fully reach its target position. This was addressed by adjusting
+        interpolation rates to balance smooth movement and responsiveness.
+    </p>
+
+    <h2>Outcome</h2>
+
+    <p>
+        The final simulation successfully demonstrated the practical application of multiple
+        mathematical concepts commonly used in game development. It provided hands-on
+        experience implementing vectors, matrices, quaternions, and interpolation while also
+        highlighting common challenges such as gimbal lock and transformation ordering.
+    </p>
+
+    <p>
+        The project significantly improved my understanding of the mathematics that underpin
+        3D game engines and provided a strong foundation for later gameplay and AI
+        programming projects.
+    </p>
+
+    <p class="tags">
+        Unity · C# · Game Mathematics · Linear Algebra · Matrices · Quaternions · Interpolation
+    </p>
+
+</section>
+
+<footer class="footer">
+
+    <p>© 2026 Oliver Lawrence</p>
+
+    <p>
+        <a href="mailto:olliescottlawrence@icloud.com">
+            Email
+        </a>
+        |
+        <a href="https://github.com/Olawrence1" target="_blank">
+            GitHub
+        </a>
+        |
+        <a href="https://www.linkedin.com/in/oliver-lawrence-663a72387" target="_blank">
+            LinkedIn
+        </a>
+        |
+        <a href="https://OLawrence.itch.io" target="_blank">
+            itch.io
+        </a>
+    </p>
+
+</footer>
+
+</body>
+</html>

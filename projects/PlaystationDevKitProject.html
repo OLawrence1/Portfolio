@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Play Station Development</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+
+    <div class="logo">
+        PDK
+    </div>
+
+    <nav class="nav">
+        <a href="../index.html">Home</a>
+        <a href="../projects.html">Projects</a>
+    </nav>
+
+</header>
+
+<section>
+
+    <h2>Overview</h2>
+
+    <div class="media-hero">
+        <video muted loop playsinline autoplay>
+            <source src="../PROGCVID.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <p>
+        This project was developed for the Program Consoles module using an official PlayStation 5 development kit and Sony's SDK. The objective was to demonstrate practical use of multiple PS5 platform libraries while gaining experience with console-specific development workflows and tooling.
+    </p>
+    
+    <p>
+        For the project, I developed a Simon Says style game that integrates controller input, graphics rendering, multithreading, and hardware-specific features available through the PS5 SDK. Unlike typical PC development, all work was completed directly against Sony's development environment and documentation under NDA restrictions.
+    </p>
+
+    <h2>My Contribution</h2>
+
+    <p>
+        I independently developed the project using C++ and the PlayStation 5 SDK, integrating several platform libraries to create a complete interactive application.
+    </p>
+
+    <p>
+        One of the primary systems I implemented was controller support through the User Service and Pad libraries. The User Service was responsible for identifying connected users and associating controllers with player profiles, while the Pad library allowed direct access to controller state including button presses, orientation data, and light bar functionality.
+    </p>
+
+    <p>
+        I also integrated Sony's AGC graphics library to render a 3D scene on the console's GPU. This was used to visualise player interaction by allowing the camera to rotate based on controller orientation while rendering objects within the scene to provide positional feedback.
+    </p>
+
+    <p>
+        To improve responsiveness, I implemented multithreading using the Kernel library. The Simon Says gameplay logic executes on a separate thread while rendering and camera updates continue independently on the main thread, allowing both systems to operate concurrently without blocking each other.
+    </p>
+
+    <p>
+        Performance profiling formed another important aspect of the project. I used Sony's Razor CPU Profiler and Razor CPU Live Profiler to analyse execution behaviour and verify optimisation work, including thread separation and CPU utilisation improvements.
+    </p>
+
+    <h2>Technical Breakdown</h2>
+    
+    <p>
+        The project demonstrates integration of multiple PlayStation SDK systems working together within a single application.
+    </p>
+
+    <p>
+        Input handling is performed directly through Sony's Pad API, allowing both traditional button input and motion-based controller orientation to influence gameplay. Controller light bar functionality was also used as part of the Simon Says interaction system.
+    </p>
+
+    <p>
+        Graphics rendering is handled through the AGC rendering framework provided with the SDK, enabling GPU-accelerated rendering and real-time camera manipulation based on player input.
+    </p>
+
+    <p>
+        Thread management uses the Kernel library to split gameplay processing from rendering operations. A lightweight sleep interval was introduced into the gameplay thread to reduce unnecessary CPU usage while maintaining responsiveness.
+    </p>
+
+    <p>
+        Throughout development, resources were carefully initialised and released after use to avoid unnecessary overhead and follow good console development practices.
+    </p>
+
+    <h2>Challenges</h2>
+
+    <p>
+        The biggest challenge was adapting to the PlayStation development workflow itself.
+    </p>
+
+    <p>
+        Unlike PC development, very little information is publicly available due to Sony's NDA requirements. Development relied almost entirely on official SDK documentation, requiring significant independent research to understand the behaviour and setup of each platform library.
+    </p>
+
+    <p>
+        Another challenge was limited access to the development hardware, as the devkits could only be accessed on-site. This required careful planning of development sessions and efficient use of available time.
+    </p>
+
+    <p>
+        Although I initially began implementing audio support using the Audio Out 2 library, I chose to prioritise performance optimisation and stability to ensure the core systems were completed to a high standard.
+    </p>
+
+    <h2>What I Learned</h2>
+
+    <p>
+        Working with the PlayStation 5 SDK significantly improved my confidence when working with unfamiliar APIs and large technical documentation sets.
+    </p>
+
+    <p>
+        The project provided practical experience with console-specific development workflows, hardware profiling tools, multithreading, and platform library integration while reinforcing the importance of planning around hardware constraints and limited development resources.
+    </p>
+
+    <h2>Outcome</h2>
+
+    <p>
+        The finished project successfully integrates multiple PlayStation 5 SDK libraries into a functional interactive application while demonstrating controller input, GPU rendering, multithreading, and performance profiling techniques.
+    </p>
+
+    <p>
+        More importantly, it provided valuable experience developing directly for console hardware using professional development tools and workflows that differ significantly from traditional PC game development.
+    </p>
+
+    <p class="tags">
+        C++ · PlayStation 5 SDK · AGC Graphics · Pad Library · User Service · Kernel Threads · Razor Profiler · Console Development
+    </p>
+
+</section>
+
+<footer class="footer">
+
+    <p>© 2026 Oliver Lawrence</p>
+
+    <p>
+        <a href="mailto:olliescottlawrence@icloud.com">
+            Email
+        </a>
+        |
+        <a href="https://github.com/Olawrence1" target="_blank">
+            GitHub
+        </a>
+        |
+        <a href="https://www.linkedin.com/in/oliver-lawrence-663a72387" target="_blank">
+            LinkedIn
+        </a>
+        |
+        <a href="https://OLawrence.itch.io" target="_blank">
+            itch.io
+        </a>
+    </p>
+
+</footer>
+
+</body>
+</html>

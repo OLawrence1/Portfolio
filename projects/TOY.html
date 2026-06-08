@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Rebellion AI Project</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+
+    <div class="logo">
+        TOY
+    </div>
+
+    <nav class="nav">
+        <a href="../index.html">Home</a>
+        <a href="../projects.html">Projects</a>
+    </nav>
+
+</header>
+
+<section>
+
+    <h2>Overview</h2>
+
+    <div class="media-hero">
+        <video muted loop playsinline autoplay>
+            <source src="../TOYVID.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <p>
+        A vertical slice sandbox shooter developed in Unity for Rebellion as part of a multidisciplinary 16-person team.
+        The project focuses on systemic gameplay, emergent AI behaviour, and objective-driven encounters within a toy-scale environment.
+    </p>
+
+    <p>
+        My role on the project was AI Programmer, responsible for building the core enemy behaviour systems, including decision-making, perception, and combat logic.
+    </p>
+
+    <div class="media-inline">
+        <img src="../TOYArielView.png">
+    </div>
+    
+    <h2>My Contribution</h2>
+
+    <p>
+        I was responsible for implementing the core enemy AI systems for the project, focusing on decision-making, perception, and combat behaviour.
+    </p>
+
+    <p>
+        I developed a Finite State Machine (FSM) architecture that drives all enemy behaviour. This includes multiple distinct states such as Patrol, Investigate, Engage, Search, and Take Cover.
+        Each state controls both movement and combat logic, allowing enemies to behave differently depending on their awareness of the player.
+    </p>
+
+    <p>
+        The game features multiple enemy types, including patrol units, guard enemies, target objectives, and stationary defenders.
+        These types share the same underlying AI framework but differ in behaviour configuration, such as movement constraints, aggression levels, and objective priorities.
+    </p>
+
+    <p>
+        I implemented a dual-sense perception system combining vision and hearing. Vision uses field-of-view checks and line-of-sight validation, while hearing is driven by gameplay events such as weapon fire and movement noise, scaled by distance and loudness.
+        Both systems feed into a shared detection model that determines whether enemies remain idle, investigate a location, or enter full combat.
+    </p>
+
+    <p>
+        I also built the squad awareness system, allowing detection events to propagate between nearby enemies. This enables coordinated group behaviour, where multiple enemies can react to a single player action rather than responding independently.
+    </p>
+
+    <p>
+        In addition, I worked on the cover system integration, implementing logic for evaluating nearby cover points and transitioning enemies into cover-based combat states.
+        This allowed enemies to reposition dynamically during firefights rather than remaining static targets.
+    </p>
+    
+    <div class="media-inline">
+        <img src="../TOYEnemySearch.png" class="img-small">
+        <img src="../TOYEnemyAlert.png" class="img-small">
+    </div>
+    
+    <div class="media-inline">
+        <img src="../TOYEnemyCover.png" class="img-small">
+    </div>
+    
+    <h2>Technical Breakdown</h2>
+
+    <p>
+        The AI architecture is built using an event-driven design, where perception, combat, and movement systems remain decoupled but communicate through shared signals.
+        This improves scalability and makes it easier to introduce new behaviours without modifying existing systems.
+    </p>
+
+    <p>
+        Enemy variation is achieved through configuration rather than separate implementations. Patrol, guard, target, and stationary enemies all use the same FSM framework, but with different state weights, movement rules, and reaction thresholds.
+    </p>
+
+    <p>
+        A key design goal was supporting emergent gameplay. The combination of vision, hearing, and squad awareness allows enemies to react dynamically to player actions, enabling different playstyles such as stealth disruption or direct combat engagement.
+    </p>
+    
+
+    <h2>Outcome</h2>
+
+    <p>
+        The final AI system supports reactive, squad-based combat that responds dynamically to player actions.
+        This helps reinforce the sandbox design of the game by allowing different playstyles such as stealth, distraction, and direct combat.
+    </p>
+
+    <p class="tags">
+        Unity · C# · AI Programming · Finite State Machines · Gameplay Systems · Behaviour Design
+    </p>
+
+</section>
+
+<footer class="footer">
+
+    <p>© 2026 Oliver Lawrence</p>
+
+    <p>
+        <a href="mailto:olliescottlawrence@icloud.com">
+            Email
+        </a>
+        |
+        <a href="https://github.com/Olawrence1" target="_blank">
+            GitHub
+        </a>
+        |
+        <a href="https://www.linkedin.com/in/oliver-lawrence-663a72387" target="_blank">
+            LinkedIn
+        </a>
+        |
+        <a href="https://OLawrence.itch.io" target="_blank">
+            itch.io
+        </a>
+    </p>
+
+</footer>
+
+</body>
+</html>

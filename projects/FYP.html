@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FYP</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+
+    <div class="logo">
+        FYP
+    </div>
+
+    <nav class="nav">
+        <a href="../index.html">Home</a>
+        <a href="../projects.html">Projects</a>
+    </nav>
+
+</header>
+
+<section>
+
+    <h2>Overview</h2>
+
+    <div class="media-hero">
+        <video muted loop playsinline autoplay>
+            <source src="../FYPVID.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <p>
+        For my final year dissertation project I investigated whether training
+        reinforcement learning agents in procedurally generated environments
+        improves their ability to generalise to unseen layouts.
+    </p>
+
+    <p>
+        Using Unity ML-Agents, I developed a procedural maze generation system
+        and trained multiple AI agents to complete navigation and objective-based
+        tasks. The project compared agents trained in fixed environments against
+        agents trained across randomly generated environments to evaluate the
+        impact on adaptability and decision making.
+    </p>
+
+    <h2>My Contribution</h2>
+
+    <p>
+        This was an entirely individual project. I was responsible for the
+        research, technical design, implementation, training, testing and
+        evaluation of all systems.
+    </p>
+
+    <ul>
+        <li>Designed and implemented procedural maze generation.</li>
+        <li>Developed reinforcement learning environments in Unity.</li>
+        <li>Created reward structures for agent training.</li>
+        <li>Configured and trained ML-Agents models.</li>
+        <li>Designed experiments and evaluation methodology.</li>
+        <li>Collected and analysed performance data.</li>
+    </ul>
+
+    <h2>Technical Breakdown</h2>
+
+    <p>
+        The project utilised Unity ML-Agents and reinforcement learning.
+        Agents observed their environment through raycast sensors and received
+        rewards for progressing towards objectives while being penalised for
+        inefficient behaviour.
+    </p>
+
+    <p>
+        A procedural generation system created unique maze layouts for each
+        training episode. This prevented the agent from memorising specific
+        paths and instead encouraged learning navigation strategies that could
+        generalise to unseen environments.
+    </p>
+
+    <p>
+        Multiple reward structures were tested throughout development to
+        encourage exploration, objective completion and efficient movement.
+        Significant iteration was required to avoid reward exploitation and
+        ensure desirable behaviour emerged during training.
+    </p>
+
+    <h2>Results</h2>
+
+    <div class="media-inline">
+        <img src="../FYPGraphComparison.png" class="img-large">
+    </div>
+
+    <p>
+        The results demonstrated a substantial improvement in adaptability
+        when agents were trained within procedurally generated environments.
+        When evaluated across unseen layouts, the procedural model achieved
+        significantly higher success rates than agents trained exclusively in
+        fixed environments.
+    </p>
+
+    <p>
+        These findings support the hypothesis that procedural training improves
+        generalisation and produces agents that are more capable of adapting to
+        unpredictable scenarios.
+    </p>
+
+</section>
+
+<footer class="footer">
+
+    <p>© 2026 Oliver Lawrence</p>
+
+    <p>
+        <a href="mailto:olliescottlawrence@icloud.com">
+            Email
+        </a>
+        |
+        <a href="https://github.com/Olawrence1" target="_blank">
+            GitHub
+        </a>
+        |
+        <a href="https://www.linkedin.com/in/oliver-lawrence-663a72387" target="_blank">
+            LinkedIn
+        </a>
+        |
+        <a href="https://OLawrence.itch.io" target="_blank">
+            itch.io
+        </a>
+    </p>
+
+</footer>
+
+</body>
+</html>
