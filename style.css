@@ -258,10 +258,12 @@ a {
 
 .cv-container {
     margin-top: 20px;
+    display: flow;
+    justify-content: center;
 }
 
 .cv-image {
-    width: 100%;
+    width: auto;
     max-width: 900px;
     height: auto;
     display: block;
