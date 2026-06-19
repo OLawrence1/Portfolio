@@ -258,6 +258,8 @@ a {
 
 .cv-container {
     margin-top: 20px;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .cv-container iframe {
