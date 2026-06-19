@@ -257,21 +257,15 @@ a {
 }
 
 .cv-container {
-    width: 100%;
-    height: 90vh; 
+    margin-top: 20px;
     overflow: auto;
-    -webkit-overflow-scrolling: touch; 
+    -webkit-overflow-scrolling: touch;
 }
 
 .cv-container iframe {
     width: 100%;
-    height: 100%;
+    height: 900px;
     border: none;
-}
-
-.cv-container iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
+    border-radius: 10px;
 }
 
